@@ -1,0 +1,23 @@
+@(per: Option[models.PersonModel])
+<table>
+<tr><td><div>@main("EMS Scala")</div></td></tr>
+<!--<div>
+<h1>The Game</h1>
+</div>-->
+<tr>
+<div class="smart-green">
+<h1>Edit Employee</h1>
+
+<form class="container" method="get" action='@routes.Application.editperson()'>
+<br>@for(p <- per){
+Code: <input type="text" name="id" value="@p.id" readonly>
+<br><br>
+Name: <input type="text" name="FirstName" value="@p.first_name">
+<br><br>
+City: <input type="text" name="city" value="@p.city">}
+<br>
+<button type="submit" class="btn btn-link">Update</button>
+</form>
+</div>
+</tr>
+</table>

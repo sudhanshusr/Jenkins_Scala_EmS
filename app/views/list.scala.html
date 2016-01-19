@@ -1,0 +1,31 @@
+@(persons: List[models.PersonModel])
+
+@main("proj")
+
+	  	<div class="smart-green">
+	  		<h1>List of employee</h1>
+	  		<form length="30px" width="100px">
+				  <table class="table">
+				  	<thead>
+				  		<tr>
+				  			<th>Code</th>
+				  			<th>Name</th>
+				  			<th>City</th>
+				  			<th>Function</th>
+				  		</tr>
+				  		</thead>
+				  		<tbody>
+				  		@for(per <- persons){
+				  		<tr>
+				  			<td>@per.id</td>
+				  			<td>@per.first_name</td>
+				  			<td>@per.city</td>
+				  			<td><a class="btn btn-lin" href="@routes.Application.edit(per.id)"/>Edit</a></td>
+							<td><a class="btn btn-lin" href="@routes.Application.delperson(per.id)"/>Delete</a></td>
+				  		</tr>}
+				  		</tbody>
+				  </table>
+		  </form>
+		  <a href="@routes.Application.index()" type="submit" class="btn btn-link">Home</a>
+		 </div>
+  

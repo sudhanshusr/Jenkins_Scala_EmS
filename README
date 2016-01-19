@@ -1,0 +1,9 @@
+This is EMS Play application
+=====================================
+
+Framework	:	Play
+FRM		:	Slick
+Database	:	MySQL
+FrontEnd	:	HTML/CSS
+
+Note : Code is a Primary key so it should be unique.

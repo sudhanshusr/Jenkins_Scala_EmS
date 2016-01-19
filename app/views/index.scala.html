@@ -1,0 +1,26 @@
+@(message: String)
+
+<table>
+<tr>
+<td><div>@main("EMS Scala")</div></td>
+</tr>
+<!-- <div>
+<h1>The Game</h1>
+<h1>The Game</h1>
+<h1>The Game</h1>
+<h1>The Game</h1>
+<h1>The Game</h1>
+<h1>The Game</h1>
+</div> -->
+ <!--<tr><td>@message</td></tr>-->
+<!--  <form action="/add" method="post">
+First name: <input type="text" name="firstName" id="firstname"><br>-->
+<tr>
+<div class="smart-green">
+<h1>Employe Details</h1>
+<a href="@routes.Application.add()" type="submit" class="btn btn-link">Add Person</a>
+<a href="@routes.Application.list()" type="submit" class="btn btn-link">List Person</a>
+</div>
+</tr>
+
+</table>
