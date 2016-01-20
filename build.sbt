@@ -25,6 +25,9 @@ mainClass in assembly := Some("play.core.server.NettyServer")
 
 play.Project.playScalaSettings
 
+//Added for scoverage
+coverageEnabled := true
+
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
   {
     case PathList("javax", "servlet", xs @ _*) => MergeStrategy.last
